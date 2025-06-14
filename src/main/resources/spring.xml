@@ -4,16 +4,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="dev" class="com.suman.Dev">
-<!--    <property name="age" value="12" />-->
-<!--        <constructor-arg name="age" value="14"/>-->
-<!--        <property name="laptop" ref="lap1"/>-->
-        <constructor-arg ref="lap1"/>
+    <bean id="dev" class="com.suman.Dev" autowire="byType">
+<!--        <property name="com" ref="lap1"/>-->
+<!--        <property name="com" ref="desk1"/>-->
     </bean>
 
-    <bean id="dev1" class="com.suman.Dev"> </bean>
+<!--    <bean id="dev1" class="com.suman.Dev"> </bean>-->
 
-    <bean id="lap1" class="com.suman.Laptop"> </bean>
+    <bean id="com" class="com.suman.Laptop" primary="true"> </bean>
+    <bean id="desk1" class="com.suman.Desktop"> </bean>
 </beans>
 
 
